@@ -1,0 +1,461 @@
+@charset "utf-8";
+
+/* clear fix */
+.cf:before,
+.cf:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+
+/* base */
+*{
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, メイリオ, Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+header {
+  font-family: Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.clear {
+  clear: both;
+}
+/* Layout */
+main {
+  
+}
+.body-inner {
+  background: linear-gradient(to bottom, #eee 0%, #fbfbfb 100%);
+}
+.body-container {
+  margin: 0 auto;
+  width: 865px;
+}
+
+/* header */
+.global-header {
+  background-image: url(../image/gh_bg_pc.svg);
+  text-align: left;
+  border-bottom: 2px solid #C2C2C2;
+  /* position: relative */
+  background-repeat: repeat-x;
+  background-color: #eaeaea;
+}
+.gh-container {
+  margin: 0 auto;
+  width: 980px;
+  /* position: relative; */
+  height: 76px;
+}
+.gh-tabs {
+  background-image: url(../image/gh_parts.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: 150px;
+  height: 75px;
+}
+.gh-tabs ul {
+  display: block;
+  background-image: url(../image/gh_boobo.png);
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: 0 36px;
+  width: 150px;
+  height: 75px;
+  list-style: none;
+}
+.gh-tabs ul li {
+  display: block;
+  position: absolute;
+}
+/* 画像パーツの表示、設定 */
+.gh-tabs ul li a {
+  background-image: url(../image/gh_parts.svg);
+  display: block;
+  background-repeat: no-repeat;
+  /* 行頭の間隔 */
+  text-indent: 110%;
+  /* 自動改行しない */
+  white-space: nowrap;
+  /* はみ出た部分を表示・スクロールしない */
+  overflow: hidden;
+}
+/* TBS画像の位置 */
+.TBS-icon {
+  left: 30px;
+  top: 8px;
+}
+/* 画像の範囲指定 */
+.TBS-icon a {
+  background-position: -170px 0;
+  width: 90px;
+  height: 26px;
+}
+.gh-program {
+  left: 32px;
+  top: 40px;
+}
+.gh-tabs ul li.gh-program a {
+  background-image: none;
+  width: 86px;
+  height: 25px;
+}
+/* .gh-mainの配置 */
+.gh-menu {
+  position: relative;
+  margin-left: 150px;
+}
+.gh-menu ul li {
+    /* td要素のような表示になる */
+    display: table-cell;
+    /* 文字のベースラインを中央揃えにする */
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.gh-menu li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #222;
+}
+.gh-main {
+  width: 100%;
+}
+.gh-main, .gh-sub {
+  /* table要素のような表示になる */
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.gh-main li {
+  border-bottom: 1px solid transparent;
+}
+.gh-main li a:hover {
+  background-color: #bfdcf3;
+}
+.gh-main li a:before {
+  height: 20px;
+  margin-top: 10px;
+  border-left: 2px solid #80B9E7;
+}
+.gh-main li:first-child a:before,
+.gh-sub li:first-child a:before {
+  border-left: none;
+}
+.gh-main li a:before,
+.gh-sub li a:before {
+  content: "";
+  display: block;
+  float: left;
+  margin-left: -1px;
+}
+.gh-main li a span,
+.gh-sub li a span {
+  display: inline-block;
+}
+.gh-main li a span {
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 87.5%;
+  padding: 0 12px;
+}
+
+/* .gh-sub */
+.gh-sub {
+  width: 59%;
+  margin-left: 41%;
+}
+.gh-sub li a:before {
+  height: 14px;
+  margin-top: 2px;
+  border-left: 2px solid #80b9e7;
+}
+.gh-sub li a span {
+  color: #FFF;
+  line-height: 18px;
+  font-size: 83%;
+  padding: 0 12px;
+}
+
+/* .gh-search-btn */
+.gh-search-btn {
+  position: absolute;
+  left: 0;
+  top: 41px;
+}
+.gh-search-btn a {
+  display: block;
+  color: #fff;
+  font-size: 83%;
+  text-decoration: none;
+  line-height: 19px;
+  letter-spacing: 0.75em;
+  padding: 0 15px;
+}
+.gh-search-btn a:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background-image: url(../image/gh_parts.svg);
+  background-position: 0 -90px;
+  background-repeat: no-repeat;
+}
+/* main */
+.main-image {
+  background: url(../image/keyvisual_pc.png) no-repeat;
+  margin: 0 auto;
+  /* width: 865px; */
+  height: 1223px;
+  background-position: top center;
+  position: relative;
+}
+.main-image h1 {
+  position: absolute;
+  top: 10px;
+  left: -52px;
+}
+.main-image h2 {
+  position: absolute;
+  bottom: 12px;
+  right: 27px;
+}
+.text1 {
+  position: absolute;
+  top: 190px;
+  right: -27px;
+}
+.text2 {
+  position: absolute;
+  top: 310px;
+  left: -28px;
+}
+.text3 {
+  position: absolute;
+  top: 40px;
+  right: 23px;
+}
+.pv-link {
+  position: absolute;
+  bottom: 16px;
+  left: 56px;
+}
+.pv-link a {
+  display: block;
+  transition: all .2s;
+}
+.pv-link a:hover {
+  transform: translate(0, 2px);
+}
+.icon-table {
+  margin: 0 auto;
+  /* width: 865px; */
+  background-position: top center;
+  
+}
+.icon-table ul {
+  display: flex;
+  margin: 20px 0;
+}
+.icon-table ul li {
+}
+.icon-table ul li + li {
+  margin-left: 7px;
+}
+.icon-table ul li a {
+  background-color: #D6D5D6;
+  display: block;
+  /* width: 90px;
+  height: 90px; */
+}
+.icon-table ul li a img {
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  width: 90px;
+  height: 90px;
+}
+.nav01 a:hover, 
+.nav03 a:hover, 
+.nav05 a:hover, 
+.nav07 a:hover, 
+.nav08 a:hover {
+  background-color: #E95194;
+}
+.nav02 a:hover, 
+.nav04 a:hover, 
+.nav06 a:hover, 
+.nav09 a:hover {
+  background-color: #5EA9DD;
+}
+.icon-table ul li a:hover {
+  transition: all .1s;
+  
+}
+.icon-table ul li a img:hover {
+  transition: all .3s;
+  transform: scale(.95);
+}
+
+/* contents */
+.contents {
+  margin-bottom: 40px;
+}
+.topics-contents {
+  width: 508px;
+  height: 380px;
+  border: 1px solid #E95194;
+  float: left;
+}
+.topics-contents h2 {
+  background-color: #E95194;
+  padding: 10px 0 7px 15px;
+}
+.update-block {
+  width: 450px;
+  height: 303px;
+  margin: 0 auto;
+  padding: 25px 15px 0;
+  overflow: auto;
+}
+.update-block::-webkit-scrollbar {
+  display: block;
+}
+.update-block dl {
+  border-bottom: 1px solid #bebebe;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+.update-block dl dt {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.update-block dl:first-child dt:after {
+  content: "NEW";
+  margin-left: 10px;
+  background-color: #E84B91;
+  color: #fff;
+  font-size: 10px;
+  font-weight: normal;
+  padding: 0 5px;
+  vertical-align: middle;
+  
+}
+.update-block dl dd {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+.update-block dl dd a {
+  text-decoration: none;
+  color: #333;
+}
+.update-block dl dd a:hover {
+  text-decoration: underline;
+}
+
+/* .twitter-contents */
+.twitter-contents {
+  width: 320px;
+  height: 380px;
+  border: 1px solid #5EA9DD;
+  float: right;
+}
+.twitter-contents h2 {
+  background-color: #5EA9DD;
+  padding: 10px 0 7px 15px;
+}
+.link-contents {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.link-contents a {
+  display: inline-block;
+}
+.link-contents a + a {
+  margin-left: 15px;
+}
+.link-contents a:hover {
+  transform: translate(0, 2px);
+  transition: all .2s;
+}
+.link-contents img {
+  width: 230px;
+  height: 70px;
+  background-size: cover;
+  border: 1px solid #bebebe;
+}
+.external-link {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.external-link ul {
+  padding: 0;
+  margin: 0;
+}
+.external-link ul li {
+  display: inline;
+  vertical-align: middle;
+}
+.external-link ul li + li {
+  margin-left: 20px;
+}
+.external-link ul li a {
+  display: inline-block;
+}
+.external-link ul li a:hover {
+  transform: translate(0, 2px);
+  transition: all .2s;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;;
+  padding-bottom: 70px;
+}
+footer p a {
+  text-decoration: none;
+  color: #222;
+}
+footer p a:hover {
+  opacity: .6;
+  transition: all .5s;
+}
+footer p span {
+  color: #333;
+}
+
+p.pgt {
+  right: 40px;
+  z-index: 20;
+}
+p.pgt a {
+  background-image: url(../image/cmn_pgt.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  width: 104px;
+  height: 124px;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+p.pgt a, p.pgt a span {
+  display: block;
+}
